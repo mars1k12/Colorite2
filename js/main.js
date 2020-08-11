@@ -46,7 +46,20 @@ var mySwiper = new Swiper('.swiper-container', {
 
 
 
-
+$(document).ready(function () {
+  $('a[href^="#"]').on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+      $('body,html').stop();
+    });
+    $('body,html').animate({ scrollTop: top }, 2200);
+  });
+});
+$('#coop_btn-mob').click(function () {
+  $('#burger').prop('checked', false);
+});
 
 
 
