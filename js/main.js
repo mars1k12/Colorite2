@@ -312,42 +312,39 @@ $('#design-portfolio_btn').on('click', () => {
 
 
 $(document).on('click', '.tab-content_inner-item', function(){
-  $('header').fadeOut();
-  $('.creating_list').fadeOut();
   $('.modal').eq( $(this).index('.tab-content_inner-item') ).fadeIn();
+  $('.modal').eq( $(this).index('.tab-content_inner-item') ).addClass('modal_class');
   $('.bg-overlay').fadeIn();
   $('footer').fadeOut();
-
 
 });
 
 $(document).on('click', '.close', function(){
   
   $('.modal').fadeOut();
-  $('header').fadeIn();
   $('.bg-overlay').fadeOut();
-  $('.creating_list').fadeIn();
   $('footer').fadeIn();
 
 
   event.preventDefault();
-  var id = $('#portfolio_id'),
+  var id = $('.modal_class'),
   top = $(id).offset().top;
   $('body,html').animate({scrollTop: top}, 1000);
+  $('.modal').removeClass('modal_class');
 });
 
 
 $(document).on('click', '.bg-overlay', function(){
   $('.modal').fadeOut();
-  $('header').fadeIn();
   $('.bg-overlay').fadeOut();
-  $('.creating_list').fadeIn();
   $('footer').fadeIn();
 
   event.preventDefault();
-          var id = $('#portfolio_id'),
+          var id = $('.modal_class'),
           top = $(id).offset().top;
           $('body,html').animate({scrollTop: top}, 1000);
+          $('.modal').removeClass('modal_class');
+
 });
 
 
@@ -359,4 +356,8 @@ $("#burger").on("click", function () {
     $('body').css("overflow", "visible")
   }
 })
+
+
+
+
 

@@ -1081,14 +1081,20 @@ footer .contacts_footer {
 }
 
 .close {
-   position: fixed;
-   top: 14%;
-   right: 6%;
+   position: absolute;
+   top: -81px;
+   right: -90px;
    border: transparent;
    background-color: transparent;
    cursor: pointer;
    z-index: 100;
+   height: 100%;
 }
+.close_inner{
+   position: sticky;
+   top: 81px;
+}
+
 
 .close:active, .close:focus {
    outline: transparent;
@@ -1123,6 +1129,7 @@ footer .contacts_footer {
 
 .modal_inner {
    padding: 0 75px;
+   position: relative;
 }
 
 .modal h6 {
@@ -1394,6 +1401,15 @@ footer .contacts_footer {
    margin-bottom: 170px;
 }
 
+
+
+
+
+
+
+
+
+
 @media (max-width:1200px) {
    h4 {
       margin-top: 10px;
@@ -1460,6 +1476,16 @@ footer .contacts_footer {
       width: 495px;
       height: 495px;
    }
+   .close {
+      position: absolute;
+      top: -81px;
+      right: 25px;
+      border: transparent;
+      background-color: transparent;
+      cursor: pointer;
+      z-index: 100;
+      height: 100%;
+  }
 }
 
 @media(max-width:860px) {
@@ -1906,6 +1932,12 @@ footer .contacts_footer {
    .likeit .head_btn {
       margin-right: 0;
    }
+   .modal-bg_line {
+      height: 60px;
+  }
+  .close {
+      top: -42px;
+}
    .services_body .header_top {
       margin-bottom: 60px;
    }
@@ -1953,12 +1985,21 @@ footer .contacts_footer {
       font-weight: 750;
       font-size: 80px;
    }
+   .typewrite {
+      display: inline; 
+  }
    .portfolio_body .typewrite {
       display: block;
    }
    .tab-content label {
       margin-right: 10px;
   }
+  .modal-grid {
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-template-rows: auto auto;
+   grid-gap: 25px 40px;
+}
 }
 
 @media(max-height:300px) {
