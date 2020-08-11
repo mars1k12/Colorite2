@@ -1082,8 +1082,8 @@ footer .contacts_footer {
 
 .close {
    position: fixed;
-   top: 112px;
-   right: 225px;
+   top: 14%;
+   right: 6%;
    border: transparent;
    background-color: transparent;
    cursor: pointer;
@@ -1430,9 +1430,7 @@ footer .contacts_footer {
       margin-top: 25px;
       margin-bottom: 50px;
    }
-   .services ul {
-      list-style-position: inside;
-   }
+
    .worktype_inner label, .price_inner label {
       margin-top: 10px;
    }
@@ -1675,6 +1673,12 @@ footer .contacts_footer {
       padding: 8px 2px;
       display: inline;
    }
+   .services_inner {
+      flex-direction: column;
+   }
+   .services_inner-item:not(:last-child) {
+      margin-right: 0;
+   }
    .linesection {
       margin-bottom: 75px;
       margin-top: 75px;
@@ -1827,7 +1831,6 @@ footer .contacts_footer {
       .services .link_inner {
          display: block;
          background: rgba(238, 108, 14, 0.18);
-         ;
          border-radius: 4px;
          font-size: 16px;
          line-height: 19px;
@@ -1836,6 +1839,7 @@ footer .contacts_footer {
          padding-top: 14px;
          padding-bottom: 14px;
       }
+
       .services .link_inner svg path {
          fill: #EE6C0E;
       }
