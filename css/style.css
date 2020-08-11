@@ -1880,6 +1880,9 @@ footer .contacts_footer {
          padding-bottom: 45px;
          margin-top: 25px;
       }
+      .footer_inner {
+         flex-direction: column;
+      }
       .tab-content_inner-item {
          position: relative;
          width: 100%;
