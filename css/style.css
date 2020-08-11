@@ -1755,6 +1755,7 @@ footer .contacts_footer {
       margin-top: 0;
       margin-bottom: 10px;
    }
+} 
    @media (max-width:480px) {
       .header_top {
          padding-top: 25px;
