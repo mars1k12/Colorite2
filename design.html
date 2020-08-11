@@ -374,7 +374,7 @@
                   </div>
                   <div class="tel_inner">
                      <label for="client_tel">Телефон</label>
-                     <input type="tel" value="" name="client_tel" id="client_tel" required>
+                     <input type="tel" value="" name="client_tel" id="client_tel" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" required>
                   </div>
                   <div class="mail_inner">
                      <label for="client_mail">Email</label>
@@ -607,6 +607,7 @@
    <script src="js/jquery-3.5.1.min.js"></script>
    <script src="js/swiper-bundle.min.js"></script>
    <script src="js/masonry.pkgd.min.js"></script>
+   <script src="js/jquery.mask.js"></script>
    <script src="js/main.js"></script>
    <script>
       AOS.init();

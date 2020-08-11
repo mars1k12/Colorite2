@@ -227,11 +227,9 @@ $(document).ready(function () {
 
 
 
-function phoneMask() {
-  var num = $(this).val().replace(/\D/g, '');
-  $(this).val(num.substring(0, 1) + '(' + num.substring(1, 4) + ')' + num.substring(4, 7) + '-' + num.substring(7, 11));
-}
-$('[type="tel"]').keyup(phoneMask);
+$(function(){
+  $("#client_tel").mask("+7(999) 999-9999");
+});
 
 
 
@@ -340,4 +338,12 @@ $(document).on('click', '.bg-overlay', function(){
 });
 
 
+
+$("#burger").on("click", function () { 
+  if ($(this).is(":checked")) {
+    $('body').css("overflow", "hidden")
+  } else {
+    $('body').css("overflow", "visible")
+  }
+})
 
