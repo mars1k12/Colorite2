@@ -475,7 +475,7 @@ h3 {
 }
 
 .services_inner-item {
-   max-width: 366px;
+   max-width: 370px;
 }
 
 .services_inner-item:not(:last-child) {
@@ -512,13 +512,13 @@ h6 {
 }
 
 .services ul {
-   list-style: outside;
+   list-style-type: disc;
    font-weight: normal;
    font-size: 18px;
    line-height: 27px;
    letter-spacing: 0.02em;
    color: #000000;
-   list-style-position: outside;
+   list-style-position: inside;
 }
 
 .services a {
@@ -1755,7 +1755,7 @@ footer .contacts_footer {
       margin-top: 0;
       margin-bottom: 10px;
    }
-} 
+}
    @media (max-width:480px) {
       .header_top {
          padding-top: 25px;
@@ -1773,8 +1773,6 @@ footer .contacts_footer {
          font-size: 18px;
       }
       .services ul {
-         list-style: outside;
-         list-style-position: outside;
          font-size: 14px;
       }
       h2 {
@@ -1953,4 +1951,4 @@ footer .contacts_footer {
       .nav_list-item {
          margin-bottom: 0;
       }
-   }
+   }  
