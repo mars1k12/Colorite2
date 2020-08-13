@@ -312,10 +312,7 @@ $('#design-portfolio_btn').on('click', () => {
 
 
 $(document).on('click', '.tab-content_inner-item', function(){
-  event.preventDefault();
-  var id = $('.tab-content'),
-  top = $(id).offset().top;
-  $('body,html').animate({scrollTop: top}, 0);
+
   $('.modal').eq( $(this).index('.tab-content_inner-item') ).fadeIn();
   $('.bg-overlay').fadeIn();
   $('footer').fadeOut();
