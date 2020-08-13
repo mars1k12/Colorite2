@@ -1247,7 +1247,7 @@ footer .contacts_footer {
 }
 
 .services_body .header_top {
-   margin-bottom: 215px;
+   margin-bottom: 120px;
 }
 
 .services_body .header_main-txt {
@@ -1279,7 +1279,10 @@ footer .contacts_footer {
 .creating_body .header_main {
    margin-bottom: 100px;
 }
-
+.creating_body .header_main h4,
+.portfolio_body .header_main h4{
+   margin-top: 0px;
+}
 .creating_list {
    background-color: rgba(246, 244, 242, 0.54);
 }
@@ -1368,35 +1371,40 @@ footer .contacts_footer {
 }
 
 .design_visual-img_inner {
-   padding-top: 175px;
    border-top: 1px solid rgba(0, 0, 0, 0.12);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
    display: flex;
    justify-content: space-between;
 }
 
 .design_visual-img_inner_img {
    display: inline-block;
-   transform: translateX(-79px) translateY(-117px);
+   transform: translateY(0px);
 }
 
 .design_visual-img_inner img {
-   width: 595px;
-   height: 595px;
+   width: 728px;
+   height: 728px;
 }
 
 .design_visual-img_inner p {
-   max-width: 839px;
+   max-width: 754px;
    font-weight: normal;
    font-size: 20px;
    line-height: 30px;
    letter-spacing: 0.02em;
    color: #333333;
 }
-
+.design_visual-img_inner p:first-child{
+   max-width: 550px;
+}
 .brif_body .header_top {
    margin-bottom: 170px;
 }
-
+.design_visual-img_inner_txt{
+   margin-top: 220px;
+   margin-bottom: 240px;
+}
 
 
 
@@ -1465,9 +1473,10 @@ footer .contacts_footer {
       font-size: 6vw;
       line-height: 7vw;
    }
-   .design_visual-img_inner_img {
-      transform: translateX(-31px) translateY(-80px);
-   }
+   .design_visual-img_inner_txt {
+      margin-top: 120px;
+      margin-bottom: 140px;
+  }
    .design_visual-img_inner img {
       width: 495px;
       height: 495px;
@@ -1638,9 +1647,9 @@ footer .contacts_footer {
    .footer_left a:not(:last-child) {
       margin-right: 40px;
    }
-   .tab-content label {
-      padding-right: 10px;
-   }
+   .portfolio_body .header_main {
+      margin-bottom: 80px;
+  }
    .modal-grid {
       display: grid;
       grid-template-columns: 180px auto;
@@ -1653,15 +1662,11 @@ footer .contacts_footer {
    .services_body .services_inner-item {
       margin-right: 70px;
    }
-   .design_visual-img_inner_img {
-      transform: translateX(-31px) translateY(-80px);
-   }
    .design_visual-img_inner img {
       width: 395px;
       height: 395px;
    }
    .design_visual-img_inner {
-      padding-top: 100px;
       margin-bottom: 50px;
    }
 }
@@ -1740,12 +1745,15 @@ footer .contacts_footer {
       line-height: 8vw;
    }
    .design_visual-img_inner_img {
-      transform: translateX(calc(100% - 361px)) translateY(-80px);
+      transform: translateX(calc(100% - 361px));
    }
    .design_visual-img_inner {
-      padding-top: 100px;
       flex-wrap: wrap;
    }
+   .design_visual-img_inner_txt {
+      margin-top: 60px;
+      margin-bottom: 60px;
+  }
 }
 
 @media (max-width:589px) {
@@ -1864,11 +1872,18 @@ footer .contacts_footer {
       fill: #EE6C0E;
    }
    .worktype_inner2 {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-items: baseline;
+      overflow-x: overlay;
+      flex-wrap:nowrap;
+      white-space: nowrap;
    }
+   .price_inner2 {
+      overflow-x: overlay;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+   }
+   .worktype_inner label, .price_inner label {
+      text-align: center;
+  }
    .price_inner {
       margin-top: 40px;
    }
@@ -1906,6 +1921,9 @@ footer .contacts_footer {
    .portfolio_body .typewrite {
       display: inline;
    }
+   .portfolio_body .header_main {
+      margin-bottom: 40px;
+  }
    .tab-content_inner-item {
       position: relative;
       width: 100%;
@@ -1913,6 +1931,7 @@ footer .contacts_footer {
       overflow: hidden;
       margin-top: 36px;
    }
+
    .grid-sizer {
       width: 100%;
       height: 100vw;
@@ -1955,17 +1974,14 @@ footer .contacts_footer {
       line-height: 44px;
       letter-spacing: 0.02em;
    }
-   .design_visual-img_inner_img {
-      transform: translateX(0) translateY(-80px);
-   }
    .design_visual-img_inner img {
       width: 100%;
       height: auto;
    }
    .design_visual-img_inner {
-      padding-top: 100px;
       flex-wrap: wrap;
    }
+
    .design_visual-img_inner {
       margin-bottom: 80px;
    }
@@ -1975,7 +1991,7 @@ footer .contacts_footer {
 }
 @media (max-width:414px) {
    .tab-content label {
-      margin-right: 68px;
+      margin-right: 100px;
   }
 }
 @media (max-width:350px) {
@@ -1990,9 +2006,7 @@ footer .contacts_footer {
    .portfolio_body .typewrite {
       display: block;
    }
-   .tab-content label {
-      margin-right: 10px;
-  }
+
   .modal-grid {
    display: grid;
    grid-template-columns: auto auto;
