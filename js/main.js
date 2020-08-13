@@ -308,11 +308,13 @@ $('#design-portfolio_btn').on('click', () => {
 
 
 
-
-
-
 $(document).on('click', '.tab-content_inner-item', function(){
-
+  event.preventDefault();
+  var id = $('.tab-content_inner'),
+  top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 0);
+  
+  $(this).addClass('modal-scroll');
   $('.modal').eq( $(this).index('.tab-content_inner-item') ).fadeIn();
   $('.bg-overlay').fadeIn();
   $('footer').fadeOut();
@@ -326,11 +328,12 @@ $(document).on('click', '.close_inner', function(){
   $('footer').fadeIn();
 
   event.preventDefault();
-          var id = $('.tab-content'),
+          var id = $('.tab-content_inner'),
           top = $(id).offset().top;
           $('body,html').animate({scrollTop: top}, 1000);
 
 
+  $('.tab-content_inner-item').removeClass('modal-scroll');
 });
 
 
@@ -339,12 +342,15 @@ $(document).on('click', '.bg-overlay', function(){
   $('.bg-overlay').fadeOut();
   $('footer').fadeIn();
   event.preventDefault();
-          var id = $('.tab-content'),
+          var id = $('.tab-content_inner'),
           top = $(id).offset().top;
-          $('body,html').animate({scrollTop: top}, 1000);
+          $('body,html').animate({scrollTop: bottom }, 0);
 
-
+          $('.tab-content_inner-item').removeClass('modal-scroll');
 });
+
+
+
 
 
 
