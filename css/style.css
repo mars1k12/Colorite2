@@ -1876,6 +1876,7 @@ footer .contacts_footer {
       flex-wrap:nowrap;
       white-space: nowrap;
    }
+
    .price_inner2 {
       overflow-x: overlay;
       flex-wrap: nowrap;
@@ -2018,5 +2019,12 @@ footer .contacts_footer {
 @media(max-height:300px) {
    .nav_list-item {
       margin-bottom: 0;
+   }
+}
+@media(any-pointer:fine){
+   .worktype_inner label:hover, .price_inner label:hover {
+      cursor: pointer;
+      background-color: #E5E5E5;
+      color: #696969;
    }
 }
